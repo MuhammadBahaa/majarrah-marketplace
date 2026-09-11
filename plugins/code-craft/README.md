@@ -10,6 +10,7 @@ Engineering-craft skills for coding agents, by **Majarrah Nexus**.
 | Skill | What it does |
 |---|---|
 | [`clean-architecture`](https://skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture) | Implements, extends, or refactors a feature with Clean Architecture in whatever stack the project already uses |
+| [`compose-screen-architecture`](https://skills.sh/muhammadbahaa/majarrah-marketplace/compose-screen-architecture) | Builds or audits the screen layer of an Android Jetpack Compose or Compose Multiplatform app — Route/Screen split, state ownership, ViewModel lifetimes, outcomes and restoration — and hands everything below the ViewModel to `clean-architecture` |
 
 ## What `clean-architecture` does
 
@@ -51,16 +52,38 @@ Two behaviors are worth knowing before you install it:
   the cost of each path stated. "Follow the project" is a legitimate answer;
   the point is that it is a decision on the record.
 
+## What `compose-screen-architecture` does
+
+It owns the chain **navigation graph → Route → Screen → components**, with
+the ViewModel as the state owner, for Jetpack Compose and Compose
+Multiplatform. Three rules hold regardless of project: every piece of state
+has one owner and is hoisted no higher than needed; a ViewModel never
+retains an Activity, View, launcher, or UI-lifetime adapter, directly or
+indirectly; and the project's conventions win over the skill's defaults
+while those two rules win over everything.
+
+The run mirrors `clean-architecture`: profile the screen conventions and
+pinned artifacts, map ownership before code (state kinds, owners,
+lifetimes, destination scope, restoration, outcome consumption, platform
+adapters), build inside-out with a gate after each part, then verify and
+report **per target** — a green JVM run is never presented as device
+proof. It also runs as an audit of an existing screen, returning a findings
+table with a proposed fix or an owner-tagged open point per row.
+
+Everything the ViewModel calls — use cases, contracts, data — is
+`clean-architecture`'s. XML-to-Compose migration is not this skill.
+
 ## Limits
 
-It is a discipline for writing code, not a verifier of code you already have:
-it will not audit a codebase, and its judgments about your conventions are
-model judgments. It adds no packages the project does not already have. It
-needs no MCP server, network access, or credentials.
+`clean-architecture` is a discipline for writing code, not a verifier of
+code you already have: it will not audit a codebase. `compose-screen-architecture`
+audits one screen at a time, never a codebase. Both skills' judgments about
+your conventions are model judgments. Neither adds packages the project does not
+already have. Neither needs an MCP server, network access, or credentials.
 
 ## Install
 
-Every route installs the same skill. Pick the one that matches your agent.
+Every route installs the same two skills. Pick the one that matches your agent.
 
 ### Codex
 
@@ -72,7 +95,7 @@ codex plugin add code-craft@majarrah-marketplace
 ```
 
 `codex plugin list` should now show `code-craft@majarrah-marketplace` as
-`installed, enabled`. Start a new Codex task to load `clean-architecture`.
+`installed, enabled`. Start a new Codex task to load both skills.
 
 ### Claude Code
 
@@ -83,7 +106,7 @@ claude plugin marketplace add MuhammadBahaa/majarrah-marketplace
 ```
 
 `/plugin` lists what is installed — `code-craft` should be enabled. Start a new
-session to load the skill.
+session to load both skills.
 
 ### Cursor, GitHub Copilot, Gemini CLI, and others
 
@@ -91,10 +114,12 @@ session to load the skill.
 npx skills add MuhammadBahaa/majarrah-marketplace --skill clean-architecture
 ```
 
-Drop the `--skill` flag to take every skill in the marketplace instead. The
-skill's page is
-[skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture](https://skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture);
-it installs into the shared Agent Skills directory these agents read. Gemini CLI
+or `--skill compose-screen-architecture`. Drop the `--skill` flag to take
+every skill in the marketplace instead. The skills' pages are
+[skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture](https://skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture)
+and
+[skills.sh/muhammadbahaa/majarrah-marketplace/compose-screen-architecture](https://skills.sh/muhammadbahaa/majarrah-marketplace/compose-screen-architecture);
+each installs into the shared Agent Skills directory these agents read. Gemini CLI
 alternative:
 `gemini skills install <skill-folder-or-git-url>`. Reload skills or restart the
 agent afterwards.

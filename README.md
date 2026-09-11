@@ -22,13 +22,14 @@ Cursor, GitHub Copilot, and Gemini CLI.
 | Plugin | What it does |
 |--------|--------------|
 | [`skill-craft`](plugins/skill-craft) | Technical review, guided walkthroughs, and a human-attention approval gate for agent skills, slash commands, and plugins. |
-| [`code-craft`](plugins/code-craft) | Clean Architecture feature implementation in whatever stack a project already uses. |
+| [`code-craft`](plugins/code-craft) | Clean Architecture feature implementation for any stack, and the Compose screen layer for Android and KMP. |
 
 Every skill also has its own page on skills.sh:
 [`skill-craft-review`](https://skills.sh/muhammadbahaa/majarrah-marketplace/skill-craft-review) ·
 [`skill-walkthrough`](https://skills.sh/muhammadbahaa/majarrah-marketplace/skill-walkthrough) ·
 [`skill-approval-gate`](https://skills.sh/muhammadbahaa/majarrah-marketplace/skill-approval-gate) ·
-[`clean-architecture`](https://skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture)
+[`clean-architecture`](https://skills.sh/muhammadbahaa/majarrah-marketplace/clean-architecture) ·
+[`compose-screen-architecture`](https://skills.sh/muhammadbahaa/majarrah-marketplace/compose-screen-architecture)
 
 ## Install
 

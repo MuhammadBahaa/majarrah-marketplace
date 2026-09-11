@@ -14,7 +14,7 @@
 | Remote source | Retrofit/Ktor service + DTOs in `data/remote/` |
 | Local source | Room `@Entity` + `@Dao` (or SQLDelight/DataStore) in `data/local/` |
 | Mappers | extension functions `toDomain()` / `toEntity()` beside the models (or the project's mapper classes) |
-| State holder | `ViewModel` exposing an immutable `StateFlow<UiState>`; sealed `UiState` with loading/content/empty/error |
+| State holder | `ViewModel` exposing an immutable `StateFlow<UiState>`; sealed `UiState` with loading/content/empty/error. On Compose, the Route/Screen split, state ownership, and ViewModel lifetimes are `compose-screen-architecture` |
 
 ```kotlin
 class SaveArticleUseCase @Inject constructor(
