@@ -28,3 +28,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python .github/scripts/publish_releases.py
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+      - name: Register published skills on skills.sh
+        continue-on-error: true
+        run: npx -y skills@latest add "https://github.com/${{ github.repository }}" -s '*' -a claude-code -y --copy
