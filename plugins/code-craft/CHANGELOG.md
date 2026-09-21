@@ -4,6 +4,11 @@ Public release history for Code Craft. Versions before 0.13.0 were private and
 are not listed here; the version number is shared with the private plugin, so
 the first public entry starts at 0.13.0 rather than 1.0.0.
 
+## 0.16.0 - 2026-09-21
+- No change to `clean-architecture` or `compose-screen-architecture`. Private
+  housekeeping in the plugin the two skills are published from; the published
+  behaviour, references, and licence are identical to 0.15.0.
+
 ## 0.15.0 - 2026-09-08
 - New skill, `compose-screen-architecture`: the screen layer for Android
   Jetpack Compose and Compose Multiplatform. It owns the navigation graph →
