@@ -221,9 +221,9 @@ memory for it.
 
 ## Modes
 
-Interactive by default: ask the one question that unblocks a real convention conflict.
+Interactive by default: ask the one question that unblocks a real conflict or a missing input.
 Autonomous when the caller announces it (a driving agent or unattended run): never ask;
-record each gap or conflict as an owner-tagged open point in the returned result and proceed with the detected convention.
+record each gap or conflict as an owner-tagged open point in the returned result and proceed with the rest.
 
 For a structural conflict with no answer, "proceed" means build to the iron rules and record the conflict as unresolved in the Screen Profile.
 

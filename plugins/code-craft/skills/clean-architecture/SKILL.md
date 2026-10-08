@@ -109,8 +109,8 @@ the report, not a question.
 
 Domain → use cases → data (models, sources, mappers, implementations, error translation) →
 delivery (state holders, UI state, and screens — or controllers, DTOs, and responses) →
-composition-root wiring. Write tests with
-the project's own test idiom as you go (testing matrix in the layer contract). Gate each
+composition-root wiring. Each layer's test first, then the layer, in
+the project's own test idiom (testing matrix in the layer contract). Gate each
 layer before moving out:
 
 - after domain + use cases: banned-import check is clean; business rules sit in domain
