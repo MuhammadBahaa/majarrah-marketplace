@@ -1,6 +1,6 @@
 {
   "name": "code-craft",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "Two architecture skills. clean-architecture \u2014 Clean Architecture feature implementation for any stack, mobile (Flutter, Android, iOS, React Native), web frontend, backend service, or desktop, with bundled mappings for the four mobile stacks and Node backends and every other stack derived live from the project's own conventions. compose-screen-architecture \u2014 the screen layer for Android Jetpack Compose and Compose Multiplatform, Route/Screen split, state ownership, ViewModel scope and lifetimes, outcomes and restoration, platform UI adapters, KMP versus Android-only placement; everything below the ViewModel hands off to clean-architecture. Project conventions are detected first and always win over either skill's defaults.",
   "author": {
     "name": "Muhammad Bahaa",

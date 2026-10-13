@@ -4,6 +4,13 @@ Public release history for Code Craft. Versions before 0.13.0 were private and
 are not listed here; the version number is shared with the private plugin, so
 the first public entry starts at 0.13.0 rather than 1.0.0.
 
+## 0.18.0 - 2026-10-12
+- `clean-architecture` Step 3: each layer's test must first fail on the
+  behavior it checks, never on code that does not exist yet. After the test,
+  the layer gets its bare shape (types and signatures, no behavior), the
+  test runs and fails on its own check, and only then is the behavior
+  written. `compose-screen-architecture` is unchanged.
+
 ## 0.16.0 - 2026-09-21
 - No change to `clean-architecture` or `compose-screen-architecture`. Private
   housekeeping in the plugin the two skills are published from; the published

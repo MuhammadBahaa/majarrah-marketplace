@@ -110,8 +110,11 @@ the report, not a question.
 Domain → use cases → data (models, sources, mappers, implementations, error translation) →
 delivery (state holders, UI state, and screens — or controllers, DTOs, and responses) →
 composition-root wiring. Each layer's test first, then the layer, in
-the project's own test idiom (testing matrix in the layer contract). Gate each
-layer before moving out:
+the project's own test idiom (testing matrix in the layer contract). The test's first
+failure must come from the behavior it checks, never from code that does not exist yet:
+after the test, give the layer its bare shape — types and signatures, no behavior — run the
+test and see it fail on its own check, then write the behavior. The bare shape is not the
+layer, so the test still comes first. Gate each layer before moving out:
 
 - after domain + use cases: banned-import check is clean; business rules sit in domain
   objects, use cases only orchestrate
