@@ -19,6 +19,12 @@
       "source": "./plugins/code-craft",
       "description": "Two architecture skills. clean-architecture \u2014 Clean Architecture feature implementation for any stack, mobile (Flutter, Android, iOS, React Native), web frontend, backend service, or desktop, with bundled mappings for the four mobile stacks and Node backends and every other stack derived live from the project's own conventions. compose-screen-architecture \u2014 the screen layer for Android Jetpack Compose and Compose Multiplatform, Route/Screen split, state ownership, ViewModel scope and lifetimes, outcomes and restoration, platform UI adapters, KMP versus Android-only placement; everything below the ViewModel hands off to clean-architecture. Project conventions are detected first and always win over either skill's defaults.",
       "version": "0.18.0"
+    },
+    {
+      "name": "orbit-crew",
+      "source": "./plugins/orbit-crew",
+      "description": "The Orbit Crew: agents of Majarrah Nexus that work on the Majarrah server, called from your own Claude Code. Its first member is Saher, the code reviewer: Saher reviews a GitHub pull request on the server and shows the report in your session. The server is not open to everyone: you need an access token from Majarrah Nexus, and a GitHub token of your own.",
+      "version": "0.1.0"
     }
   ]
 }

@@ -23,6 +23,7 @@ Cursor, GitHub Copilot, and Gemini CLI.
 |--------|--------------|
 | [`skill-craft`](plugins/skill-craft) | Technical review, guided walkthroughs, and a human-attention approval gate for agent skills, slash commands, and plugins. |
 | [`code-craft`](plugins/code-craft) | Clean Architecture feature implementation for any stack, and the Compose screen layer for Android and KMP. |
+| [`orbit-crew`](plugins/orbit-crew) | The Orbit Crew: agents that work on the Majarrah server, called from Claude Code. Its first member is Saher, the code reviewer. Needs an access token from Majarrah Nexus. |
 
 Every skill also has its own page on skills.sh:
 [`skill-craft-review`](https://skills.sh/muhammadbahaa/majarrah-marketplace/skill-craft-review) ·

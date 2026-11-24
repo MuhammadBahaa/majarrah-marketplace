@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "saher": {
+      "type": "http",
+      "url": "https://saher.majarrahnexus.io/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.saher_access_token}",
+        "X-GitHub-Token": "${user_config.github_token}"
+      }
+    }
+  }
+}
